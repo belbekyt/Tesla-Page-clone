@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: black;
+    color: white;
+    font-family: Gotham Medium,-apple-system, arial;
+    font-weight: 700;
+}
+
+nav{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.8px;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+}
+
+ul li{
+    margin: 15px;
+}
+
+.logo{
+    width: 100px;
+    margin: -38px -12px 0 -3px;
+    filter: brightness(0) invert(1);
+}
+
+.icon{
+    width: 20px;
+    filter: brightness(0) invert(1);
+}
+
+header{
+    background-image: url("https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/teslaweb/homepage/Wall_Connector_banner_web.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 93px;
+}
+
+.shop-now{
+    font-size: 13px;
+    width: 290px;
+    height: 42px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: rgb(88, 88, 88);
+    border-radius: 25px;
+}
+
+article h3{
+    margin: 15px 0 30px 0;
+    font-size: 28px;
+}
+
+
+article h2{
+    font-size: 40px;
+}
