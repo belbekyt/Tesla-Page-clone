@@ -5,9 +5,8 @@
 }
 
 body{
-    background-color: black;
     color: white;
-    font-family: Gotham Medium,-apple-system, arial;
+    font-family: "Gotham Medium", -apple-system, arial;
     font-weight: 700;
 }
 
@@ -20,6 +19,8 @@ nav{
     font-weight: 700;
     font-size: 14px;
     letter-spacing: 0.8px;
+    position: fixed;
+    z-index: 2;
 }
 
 ul{
@@ -43,21 +44,32 @@ ul li{
 }
 
 header{
-    background-image: url("https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/teslaweb/homepage/Wall_Connector_banner_web.jpg");
-    background-position: center;
-    background-size: cover;
     height: 100vh;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 header article{
+    background-position: center;
+    background-size: cover;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
-    margin-bottom: 93px;
+    height: 100vh;
+    padding-bottom: 95px;
+}
+
+.banner1{
+    background-image: url("https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/teslaweb/homepage/Wall_Connector_banner_web.jpg");
+}
+
+.banner2{
+    background-image: url("https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/teslaweb/homepage/Chill_banner_web.jpg");
+}
+
+.banner3{
+    background-image: url("https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/teslaweb/homepage/MY_Floormats_banner_web.jpg");
 }
 
 .shop-now{
@@ -68,6 +80,7 @@ header article{
     letter-spacing: 0.5px;
     color: rgb(88, 88, 88);
     border-radius: 25px;
+    border: none;
 }
 
 article h3{
@@ -78,4 +91,141 @@ article h3{
 
 article h2{
     font-size: 40px;
+}
+
+.sellers{
+    color: black;
+}
+
+.sellers h2{
+    margin: 50px 0 30px 28px;
+}
+
+.holder{
+    margin-left: 28px;
+    margin-bottom: 60px;
+    width: 95vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.offer{
+    width: 32%;
+}
+
+.offer img{
+    width: 100%;
+}
+
+.offer p{
+    font-size: 17px;
+    letter-spacing: 0.7px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.product{
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    height: 720px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 75px;
+}
+
+.product h2{
+    margin-bottom: 25px;
+    font-size: 35px;
+}
+
+.black-model{
+    color: rgb(32, 32, 32);
+}
+
+.p1{
+    background-image: url("https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/teslaweb/homepage/MS_web.jpg");
+}
+
+.p2{
+    background-image: url("https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/teslaweb/homepage/M3_web.jpg");
+}
+
+.p3{
+    background-image: url("https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/teslaweb/homepage/MX_web.jpg");
+}
+
+.p4{
+    background-image: url("https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/teslaweb/homepage/MY_web.jpg");
+}
+
+.p5{
+    background-image: url("https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/teslaweb/homepage/Charging_web.jpg");
+}
+
+.p6{
+    background-image: url("https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/teslaweb/homepage/Lifestyle_web.jpg");
+}
+
+.merch{
+    width: 100%;
+    height: 720px;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(32, 32, 32);
+}
+
+.m1, .m2, .m3{
+    width: 32.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 60px;
+    background-position: center;
+    background-size: cover;
+}
+
+.m1{
+    background-image: url("https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/teslaweb/homepage/Men_web.jpg");
+}   
+
+.m2{
+    background-image: url("https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/teslaweb/homepage/Women_web.jpg");
+}   
+
+.m3{
+    background-image: url("https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/teslaweb/homepage/Kids_web.jpg");
+}   
+
+.corrected{
+    border: 3px solid black;
+    width: 135px;
+}
+
+.ending-button{
+    border: 3px solid black;
+}
+
+.corrected:hover, .ending-button:hover{
+    transition: 0.6s;
+    background-color: black;
+    color: white;
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(133, 133, 133);
+    font-size: 13px;
+}
+
+.owl-theme .owl-nav.disabled+.owl-dots {
+    margin-top: -65px !important;
+    z-index: 100;
 }
