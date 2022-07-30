@@ -1,10 +1,21 @@
-$('.owl-carousel').owlCarousel({
+$('.owl1').owlCarousel({
     loop:true,
     autoplay:true,
     autoplayTimeout:4000,
     responsive:{
         0:{
             items:1
+        }
+    }
+})
+
+$('.owl2').owlCarousel({
+    loop:true,
+    autoplay:true,
+    autoplayTimeout:6500,
+    responsive:{
+        0:{
+            items:3
         }
     }
 })
