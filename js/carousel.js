@@ -13,6 +13,7 @@ $('.owl2').owlCarousel({
     loop:true,
     autoplay:true,
     autoplayTimeout:6500,
+    dots:false,
     responsive:{
         0:{
             items:3
