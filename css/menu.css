@@ -1,0 +1,46 @@
+.hidden-menu{
+    width: 100vw;
+    height: 380px;
+    background-color: white;
+    position: fixed;
+    z-index: 2;
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-around;
+    color: black;
+    padding: 0 25px;
+}
+
+.menu-headers{
+    display: grid;
+    grid-template-columns: 185px 185px 185px 185px;
+    margin-top: 50px;
+    height: 150px;
+    justify-content: space-around;
+}
+
+.menu-headers h4{
+    margin: 15px;
+    position: relative;
+}
+
+.menu-headers h4::before{
+    content: "";
+    position: fixed;
+    margin-top: 22px;
+    width: 140px;
+    height: 5px;
+    background-color: #d0d1d2;
+}
+
+.menu-photo h2{
+    color: #393c41;
+    margin-top: 15px;
+}
+
+.menu-photo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
