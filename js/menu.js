@@ -63,3 +63,48 @@ menu.addEventListener("mouseout", (e) => {
         e.target.classList.remove("li-active");
     }
 })
+
+// second part menu -- hovering on menu buttons cause showing/hiding bigger menu
+
+const firstHidden = $("#first-hidden");
+const secondHidden = $("#second-hidden");
+const thirdHidden = $("#third-hidden");
+const fourthHidden = $("#fourth-hidden");
+const firstButton = $("#first-button");
+const secondButton = $("#second-button");
+const thirdButton = $("#third-button");
+const fourthButton = $("#fourth-button");
+
+const hideAll = function(){
+    firstHidden.hide();
+    secondHidden.hide();
+    thirdHidden.hide();
+    fourthHidden.hide();
+}
+
+hideAll();
+
+menu.addEventListener("mouseover", (e) => {
+    if(e.target.id == "first-button"){
+        hideAll();
+        firstHidden.show();
+    }
+    else if(e.target.id == "second-button"){
+        hideAll();
+        secondHidden.show();
+    }
+    else if(e.target.id == "third-button"){
+        hideAll();
+        thirdHidden.show();
+    }
+    else if(e.target.id == "fourth-button"){
+        hideAll();
+        fourthHidden.show();
+    }
+})
+
+const menuController = $("#controller");
+
+menuController.addEventListener("mouseover", () => {
+    console.log("hello");
+})
