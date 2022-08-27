@@ -21,7 +21,7 @@ nav{
     font-size: 14px;
     letter-spacing: 0.8px;
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     transition: 0.2s;
 }
 

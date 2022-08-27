@@ -1,4 +1,5 @@
 let scrollTopValue = 0;
+let flag = false;
 
 const menu = document.querySelector("nav");
 const icon1 = document.querySelector("#icon1");
@@ -43,10 +44,12 @@ menu.addEventListener("mouseover", () => {
 })
 
 menu.addEventListener("mouseout", () => {
-    menu.classList.remove("nav-active");
-    icon1.classList.remove("image-convert-on");
-    icon2.classList.remove("image-convert-on");
-    logo.classList.remove("image-convert-on");
+    if(!flag){
+        menu.classList.remove("nav-active");
+        icon1.classList.remove("image-convert-on");
+        icon2.classList.remove("image-convert-on");
+        logo.classList.remove("image-convert-on");
+    }
 })
 
 // menu showing on white and disappear ^^^
@@ -66,7 +69,7 @@ menu.addEventListener("mouseout", (e) => {
 
 // second part menu -- hovering on menu buttons cause showing/hiding bigger menu
 
-const firstHidden = $("#first-hidden");
+const firstHidden = $("firstHidden");
 const secondHidden = $("#second-hidden");
 const thirdHidden = $("#third-hidden");
 const fourthHidden = $("#fourth-hidden");
@@ -76,6 +79,7 @@ const thirdButton = $("#third-button");
 const fourthButton = $("#fourth-button");
 
 const hideAll = function(){
+    console.log("eh")
     firstHidden.hide();
     secondHidden.hide();
     thirdHidden.hide();
@@ -84,27 +88,38 @@ const hideAll = function(){
 
 hideAll();
 
-menu.addEventListener("mouseover", (e) => {
+
+firstHidden.hide();
+
+menu.addEventListener("click", (e) => {
     if(e.target.id == "first-button"){
+        flag = true;
         hideAll();
-        firstHidden.show();
+        // firstHidden.show();
     }
     else if(e.target.id == "second-button"){
+        flag = true;
         hideAll();
-        secondHidden.show();
+        // secondHidden.show();
     }
     else if(e.target.id == "third-button"){
+        flag = true;
         hideAll();
-        thirdHidden.show();
+        // thirdHidden.show();
     }
     else if(e.target.id == "fourth-button"){
+        flag = true;
         hideAll();
-        fourthHidden.show();
+        // fourthHidden.show();
     }
 })
 
-const menuController = $("#controller");
-
-menuController.addEventListener("mouseover", () => {
-    console.log("hello");
-})
+firstHidden.mouseleave(() => {
+    console.log("hideeeea")
+    hideAll();
+    flag = false;
+    menu.classList.remove("nav-active");
+    icon1.classList.remove("image-convert-on");
+    icon2.classList.remove("image-convert-on");
+    logo.classList.remove("image-convert-on");
+});
