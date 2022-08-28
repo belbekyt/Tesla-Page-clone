@@ -6,28 +6,36 @@ const icon1 = document.querySelector("#icon1");
 const icon2 = document.querySelector("#icon2");
 const logo = document.querySelector(".logo");
 
-icon1.classList.add("image-convert-off");
-icon2.classList.add("image-convert-off");
-logo.classList.add("image-convert-off");
+let addMenuOff = () => {
+    icon1.classList.add("image-convert-off");
+    icon2.classList.add("image-convert-off");
+    logo.classList.add("image-convert-off");
+}
+
+addMenuOff();
+
+let addMenuOn = () => {
+    icon1.classList.add("image-convert-on");
+    icon2.classList.add("image-convert-on");
+    logo.classList.add("image-convert-on");
+}
+
+let removeMenu = () => {
+    menu.classList.remove("nav-active");
+    addMenuOn();
+}
 
 let check = () => {
     if(scrollTopValue>75){
         menu.classList.add("nav-active");
-        icon1.classList.add("image-convert-on");
-        icon2.classList.add("image-convert-on");
-        logo.classList.add("image-convert-on");
+        addMenuOn();
         icon1.classList.remove("image-convert-off");
         icon2.classList.remove("image-convert-off");
         logo.classList.remove("image-convert-off");
     }
     else{
-        menu.classList.remove("nav-active");
-        icon1.classList.remove("image-convert-on");
-        icon2.classList.remove("image-convert-on");
-        logo.classList.remove("image-convert-on");
-        icon1.classList.add("image-convert-off");
-        icon2.classList.add("image-convert-off");
-        logo.classList.add("image-convert-off");
+        removeMenu();
+        addMenuOff();
     }
 }
 
@@ -38,48 +46,23 @@ window.addEventListener("scroll", (e) => {
 
 menu.addEventListener("mouseover", () => {
     menu.classList.add("nav-active");
-    icon1.classList.add("image-convert-on");
-    icon2.classList.add("image-convert-on");
-    logo.classList.add("image-convert-on");
+    addMenuOn();
 })
 
 menu.addEventListener("mouseout", () => {
-    if(!flag){
-        menu.classList.remove("nav-active");
-        icon1.classList.remove("image-convert-on");
-        icon2.classList.remove("image-convert-on");
-        logo.classList.remove("image-convert-on");
-    }
+    !flag ? removeMenu() : "";
 })
 
 // menu showing on white and disappear ^^^
-// showing additional box with buttons ,,,
+// second part menu -- clicking on menu buttons cause showing/hiding bigger menu
 
-menu.addEventListener("mouseover", (e) => {
-    if(e.target.classList.contains("li-script")){
-        e.target.classList.add("li-active");
-    }
-})
-
-menu.addEventListener("mouseout", (e) => {
-    if(e.target.classList.contains("li-script")){
-        e.target.classList.remove("li-active");
-    }
-})
-
-// second part menu -- hovering on menu buttons cause showing/hiding bigger menu
-
-const firstHidden = $("firstHidden");
+const firstHidden = $("#first-hidden");
 const secondHidden = $("#second-hidden");
 const thirdHidden = $("#third-hidden");
 const fourthHidden = $("#fourth-hidden");
-const firstButton = $("#first-button");
-const secondButton = $("#second-button");
-const thirdButton = $("#third-button");
-const fourthButton = $("#fourth-button");
+const hiddenMenus = [firstHidden, secondHidden, thirdHidden, fourthHidden]
 
 const hideAll = function(){
-    console.log("eh")
     firstHidden.hide();
     secondHidden.hide();
     thirdHidden.hide();
@@ -88,38 +71,34 @@ const hideAll = function(){
 
 hideAll();
 
-
-firstHidden.hide();
-
 menu.addEventListener("click", (e) => {
-    if(e.target.id == "first-button"){
-        flag = true;
-        hideAll();
-        // firstHidden.show();
-    }
-    else if(e.target.id == "second-button"){
-        flag = true;
-        hideAll();
-        // secondHidden.show();
-    }
-    else if(e.target.id == "third-button"){
-        flag = true;
-        hideAll();
-        // thirdHidden.show();
-    }
-    else if(e.target.id == "fourth-button"){
-        flag = true;
-        hideAll();
-        // fourthHidden.show();
-    }
-})
+    switch(e.target.id){
+        case "first-button":
+            flag = true;
+            hideAll();
+            firstHidden.show();
+            break;
+        case "second-button":
+            flag = true;
+            hideAll();
+            secondHidden.show();
+            break;
+        case "third-button":
+            flag = true;
+            hideAll();
+            thirdHidden.show();
+            break;    
+        case "fourth-button":
+            flag = true;
+            hideAll();
+            fourthHidden.show();
+            break;
+}})
 
-firstHidden.mouseleave(() => {
-    console.log("hideeeea")
-    hideAll();
-    flag = false;
-    menu.classList.remove("nav-active");
-    icon1.classList.remove("image-convert-on");
-    icon2.classList.remove("image-convert-on");
-    logo.classList.remove("image-convert-on");
-});
+hiddenMenus.forEach((item) => {
+    item.mouseleave(() => {
+        hideAll();
+        flag = false;
+        removeMenu();
+    })
+})

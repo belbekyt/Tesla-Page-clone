@@ -72,7 +72,7 @@ ul li{
     margin: 0 10px;
 }
 
-.li-active{
+.li-active:hover{
     cursor: pointer;
     background-color: rgb(230, 230, 230);
 }
