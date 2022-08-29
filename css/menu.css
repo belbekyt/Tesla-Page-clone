@@ -20,6 +20,7 @@
 }
 
 .menu-headers h4{
+    cursor: pointer;
     margin: 15px;
     position: relative;
 }
@@ -67,4 +68,16 @@
 
 .menu-fix{
     grid-template-columns: 250px 250px 250px;
+}
+
+/* side menu  */
+
+aside{
+    position: fixed;
+    right: 0;
+    width: 450px;
+    min-height: 100vh;
+    background-color: white;
+    z-index: 5;
+
 }

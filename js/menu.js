@@ -6,15 +6,8 @@ const icon1 = document.querySelector("#icon1");
 const icon2 = document.querySelector("#icon2");
 const logo = document.querySelector(".logo");
 
-let addMenuOff = () => {
-    icon1.classList.add("image-convert-off");
-    icon2.classList.add("image-convert-off");
-    logo.classList.add("image-convert-off");
-}
-
-addMenuOff();
-
-let addMenuOn = () => {
+let addMenu = () => {
+    menu.classList.add("nav-active");
     icon1.classList.add("image-convert-on");
     icon2.classList.add("image-convert-on");
     logo.classList.add("image-convert-on");
@@ -22,20 +15,17 @@ let addMenuOn = () => {
 
 let removeMenu = () => {
     menu.classList.remove("nav-active");
-    addMenuOn();
+    icon1.classList.remove("image-convert-on");
+    icon2.classList.remove("image-convert-on");
+    logo.classList.remove("image-convert-on");
 }
 
 let check = () => {
     if(scrollTopValue>75){
-        menu.classList.add("nav-active");
-        addMenuOn();
-        icon1.classList.remove("image-convert-off");
-        icon2.classList.remove("image-convert-off");
-        logo.classList.remove("image-convert-off");
+        addMenu();
     }
     else{
         removeMenu();
-        addMenuOff();
     }
 }
 
@@ -45,8 +35,7 @@ window.addEventListener("scroll", (e) => {
 });
 
 menu.addEventListener("mouseover", () => {
-    menu.classList.add("nav-active");
-    addMenuOn();
+    addMenu();
 })
 
 menu.addEventListener("mouseout", () => {
