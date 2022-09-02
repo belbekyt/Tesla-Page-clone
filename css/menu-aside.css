@@ -1,7 +1,7 @@
 aside{
     position: fixed;
     right: 0;
-    width: 460px;
+    width: 370px;
     min-height: 100vh;
     background-color: white;
     z-index: 5;
@@ -31,25 +31,36 @@ aside{
 }
 
 .aside-menu-holder{
-    width: 87%;
+    width: 82%;
     color: black;
     display: flex;
     flex-direction: column;
-    font-size: 13.5px;
+    font-size: 15px;
+    font-weight: 300;
     letter-spacing: 0.5px;
     margin: 60px 0 0 35px;
 }
 
-.aside-menu-holder p{
+.aside-menu-holder input{
+    height: 37px;
+    font-size: 14.5px;
+    padding-left: 20px;
+    border: none;
+    background-color: rgb(240, 240, 240);
     margin-bottom: 10px;
-    height: 28px;
-    line-height: 28px;
+    border-radius: 5px;
+}
+
+.aside-menu-holder p{
+    margin-bottom: 7px;
+    height: 37px;
+    line-height: 37px;
     padding-left: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     transition: 1s;
 }
 
-.aside-menu-holder p:hover{
+.hidden-options div:hover, .aside-menu-holder p:hover{
     cursor: pointer;
     background-color: rgb(240, 240, 240);
 }
@@ -64,4 +75,18 @@ body{
 
 .item-not-blur{
     filter: blur(0px);
+}
+
+.hidden-options div{
+    transition: 1s;
+    display: flex;
+    height: 37px;
+    margin-bottom: 7px;
+    justify-content: space-between;
+}
+
+.hidden-options img{
+    width: 10px;
+    height: 10px;
+    margin: 13px;
 }
