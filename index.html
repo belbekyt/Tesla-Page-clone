@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/menu.css">
     <link rel="stylesheet" type="text/css" href="css/menu-aside.css">
+    <link rel="stylesheet" type="text/css" href="css/media.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -21,7 +22,7 @@
                 <li><p>|</p></li>
                 <li class="li-active">Shop</li>
             </ul>
-            <ul>
+            <ul id="normal-menu">
                 <li class="li-active" id="first-button">Charging</li>
                 <li class="li-active" id="second-button">Vehicle Accessories</li>
                 <li class="li-active" id="third-button">Apparel</li>
@@ -162,7 +163,7 @@
             </div>
             <div class="aside-menu-holder">
                 <input type="text" placeholder="Search">
-                <div class="hidden-options">
+                <div id="special-menu" class="hidden-options">
                     <div>
                         <p>Charging</p>
                         <img src="photo/arrow.png" alt="Click here for more">
@@ -184,6 +185,27 @@
                 <p>Sign In</p>
             </div>
         </aside>
+        <div class="first-aside">
+            <p class="back">Back</p>
+            <div class="close-btn">
+                <img src="photo/x.png" alt="close button">
+            </div>
+            <h2>Charging</h2>
+            <div class="box-holder">
+                <div class="aside-box">
+                    <img src="https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/mpos/nav-tiles/FeaturedNavMPOS_1457768-02-G.jpg" alt="">
+                    <p>At Home</p>
+                </div>
+                <div class="aside-box">
+                    <img src="https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/mpos/nav-tiles/FeaturedNavMPOS_1512830-00-A.jpg" alt="">
+                    <p>On the Road</p>
+                </div>
+                <div class="aside-box">
+                    <img src="https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/mpos/nav-tiles/FeaturedNavMPOS_1551813-00-A.jpg" alt="">
+                    <p>Parts</p>
+                </div>
+            </div>
+        </div>
         <div class="owl-carousel owl1 owl-theme">
             <article class="item banner1">
                 <h2>Wall Connector</h2>

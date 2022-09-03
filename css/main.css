@@ -264,3 +264,7 @@ footer{
     margin-top: -65px !important;
     z-index: 100;
 }
+
+.item h2, .item h3{
+    text-align: center;
+}

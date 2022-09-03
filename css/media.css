@@ -1,0 +1,25 @@
+@media only screen and (max-width: 1000px) {
+    .m3 h3, .m2 h3, .m1 h3{
+        font-size: 20px;
+    }
+
+    .corrected{
+        border: 2px solid black;
+        height: 33px;
+        font-size: 11px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .m3 h3, .m2 h3, .m1 h3{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .ending-button{
+        border: 2px solid black;
+        font-size: 13px;
+        width: 220px;
+    }
+}
