@@ -1,4 +1,4 @@
-aside, .first-aside{
+aside, .aside-block{
     position: fixed;
     right: 0;
     width: 370px;
@@ -83,13 +83,12 @@ body{
     margin: 13px;
 }
 
-.first-aside{
-    display: block;
+.aside-block{
     z-index: 6;
     color: black;
 }
 
-.first-aside h2{
+.aside-block h2{
     margin: 60px 0 25px 30px;
     letter-spacing: 0.5px;
     font-weight: 300;
@@ -105,7 +104,9 @@ body{
 }
 
 .aside-box{
-    width: 85%;
+    width: 100%;
+    margin: auto;
+    cursor: pointer;
 }
 
 .aside-box img{
@@ -119,9 +120,20 @@ body{
     text-align: center;
 }
 
-.box-holder{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.view-all{
+    width: 310px;
+    font-size: 16px;
+    height: 35px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2.5px solid black;
+    position: fixed;
+    bottom: 30px;
+    margin-left: 30px;
+    transition: 0.5s;
+}
+
+.view-all:hover{
+    background-color: black;
+    color: white;
 }

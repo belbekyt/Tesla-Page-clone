@@ -49,7 +49,7 @@ const firstHidden = $("#first-hidden");
 const secondHidden = $("#second-hidden");
 const thirdHidden = $("#third-hidden");
 const fourthHidden = $("#fourth-hidden");
-const hiddenMenus = [firstHidden, secondHidden, thirdHidden, fourthHidden]
+const hiddenMenus = [firstHidden, secondHidden, thirdHidden, fourthHidden];
 
 const hideAll = function(){
     firstHidden.hide();
