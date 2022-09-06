@@ -15,6 +15,7 @@ const charging = $("#charging");
 const vehicle = $("#vehicle");
 const apparel = $("#apparel");
 const lifestyle = $("#lifestyle");
+const asides = [charging, vehicle, apparel, lifestyle];
 
 const firstAside = $("#first-aside");
 const secondAside = $("#second-aside");
@@ -31,11 +32,11 @@ specialMenu.hide();
 
 menuBtn.click(() => {
     aside.show(600);
-})
+});
 
 close1.click(() => {
     aside.hide(500);
-})
+});
 
 const closeAll = () => {
     firstAside.hide(500);
@@ -51,7 +52,7 @@ closeBtns.forEach((item) => {
         aside.hide(500);
         closeAll();
     })
-})
+});
 
 let windowWidth = 0;
 
@@ -75,18 +76,22 @@ backBtns.forEach((item) => {
     item.click(() => {
         closeAll();
     })
-})
+});
 
 charging.click(() => {
     firstAside.show(500);
-})
+});
+
 vehicle.click(() => {
     secondAside.show(500);
-})
+});
+
 apparel.click(() => {
     thirdAside.show(500);
-})
+});
 
 lifestyle.click(() => {
     fourthAside.show(500);
-})
+});
+
+//tied to put clicks into switch but this causes some errors - probably the owl carousel library is bugged :(
